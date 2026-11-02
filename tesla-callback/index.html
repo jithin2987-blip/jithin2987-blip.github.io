@@ -1,0 +1,11 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tesla code</title></head>
+<body style="font-family:sans-serif;margin:2rem 1rem">
+<h3>Tesla authorization code</h3>
+<p>Copy this code and paste it in your chat. It expires in about 10 minutes and works once.</p>
+<div id="c" style="font-family:monospace;word-break:break-all;background:#f2f2f2;padding:1rem;border-radius:8px">...</div>
+<script>
+var q = new URLSearchParams(location.search);
+var code = q.get('code');
+document.getElementById('c').textContent = code ? code : ('No code found' + (q.get('error') ? ': ' + q.get('error') : '') + ' - screenshot this page and send it in chat.');
+</script>
+</body></html>
